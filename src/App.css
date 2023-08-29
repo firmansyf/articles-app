@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.detail-top {
+  display: flex;
+  flex-direction: column;
+  width: "100%";
+}
+
+.author-class,
+.title-class,
+.description-class,
+.content-class {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-middle {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: bold;
+}
