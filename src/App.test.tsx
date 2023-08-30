@@ -1,7 +1,12 @@
-import { render } from "@testing-library/react";
+import { render, cleanup } from "@testing-library/react";
 import App from "./App";
 import { getArticles } from "./api";
 import Home from "./pages/home";
+import { afterEach } from "vitest";
+
+afterEach(() => {
+  cleanup();
+});
 
 describe("TESTING...", () => {
   it("Test.., Render Data API", () => {
