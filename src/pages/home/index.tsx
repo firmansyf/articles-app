@@ -2,7 +2,6 @@ import { FC, useState, useEffect } from "react";
 import { Layout, Space, Breadcrumb, Card, Button } from "antd";
 import { getArticles } from "../../api";
 import ModalDetail from "./detail";
-import { uid } from "uid";
 
 const headerStyle: React.CSSProperties = {
   color: "#000",
@@ -107,6 +106,7 @@ const Home: FC = () => {
                       />
                       <Button
                         key="back"
+                        id="btnDetail"
                         onClick={() => {
                           setIsId(item.id);
                           setShowModal(true);

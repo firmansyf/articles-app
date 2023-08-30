@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { FC, useEffect, useState } from "react";
 import { Modal, Button } from "antd";
 import { getArticles } from "../../api";
@@ -75,24 +76,24 @@ const ModalDetail: FC<Props> = ({ showModal, setShowModal, isId }) => {
               </div>
               <div className="author-class">
                 <label>Author : </label>
-                <span>{c?.author}</span>
+                <span>{c?.author || "-"}</span>
               </div>
             </div>
 
             <div className="detail-middle">
               <div className="title-class">
                 <label>Title : </label>
-                <span>{c?.title}</span>
+                <span>{c?.title || "-"}</span>
               </div>
 
               <div className="description-class">
                 <label>Description : </label>
-                <span>{c?.description}</span>
+                <span>{c?.description || "-"}</span>
               </div>
 
               <div className="content-class">
                 <label>Content : </label>
-                <span>{c?.content}</span>
+                <span>{c?.content || "-"}</span>
               </div>
 
               <div className="url-class">
